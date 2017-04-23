@@ -4,6 +4,11 @@
     <head>
         <title>{% block title %}This is my new project home page{% endblock title %}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+          <link href="../../static/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+      <!--<link href="../static/css/style.css" rel="stylesheet" type="text/css">-->
+
+      <script type="text/javascript" src="../../static/bootstrap/js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="../../static/bootstrap/js/bootstrap.min.js"></script>
         <style type="text/css">
             .nav {
                 padding-left: 0;
@@ -30,10 +35,19 @@
     </head>
     <body>
         {% cms_toolbar %}
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+
         <div class="container">
-            <ul class="nav">
-                {% show_menu 0 100 100 100 %}
-            </ul>
+            <a class="navbar-brand" href="/" >Abenezer Yakob</a>
+            <div class="collapse navbar-collapse" id="navbarExample">
+                <ul class="nav navbar-nav">
+                    <li>{% show_menu 0 1 100 100  %}</li>
+                </ul>
+            </div>
+        </div>
+       </nav>
+        <div class="container">
+
             {% block content %}{% endblock content %}
         </div>
         {% render_block "js" %}

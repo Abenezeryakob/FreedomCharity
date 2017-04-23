@@ -144,12 +144,35 @@ INSTALLED_APPS = (
     'cmsplugin_filer_folder',
     'cmsplugin_filer_image',
     'cmsplugin_filer_utils',
-    'djangocms_style',
+    #'djangocms_style',
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-    'venus'
+    'venus',
+    'aldryn_style',
+    'aldryn_bootstrap3',
+    'our_children',
+    'imagekit',
+    'ckeditor_uploader',
+    'ckeditor'
+
 )
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}
+
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 LANGUAGES = (
     ## Customize this
@@ -200,6 +223,15 @@ DATABASES = {
 MIGRATION_MODULES = {
     
 }
+_ = lambda s: s
+ALDRYN_BOOTSTRAP3_CAROUSEL_STYLES = [
+    ('feature', _('Featured Version')),
+]
+ALDRYN_BOOTSTRAP3_ICONSETS = [
+    ('glyphicons', 'glyphicons', 'Glyphicons'),
+    ('fontawesome', 'fa', 'Font Awesome'),
+    ('icons', 'icon', 'Custom Icons'),
+]
 
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',

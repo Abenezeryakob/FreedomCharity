@@ -154,7 +154,8 @@ INSTALLED_APPS = (
     'our_children',
     'imagekit',
     'ckeditor_uploader',
-    'ckeditor'
+    'ckeditor',
+    'cmsplugin',
 
 )
 

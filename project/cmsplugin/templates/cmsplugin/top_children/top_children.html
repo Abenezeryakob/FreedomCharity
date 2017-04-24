@@ -1,0 +1,11 @@
+{% load thumbnail %}
+
+{% block plugin_content %}
+    <div class="container">
+        <span>
+            {% for i in instance.our_children.all %}
+            {{ i.first_name}}
+            {% endfor%}
+        </span>
+    </div>
+{% endblock %}

@@ -20,6 +20,9 @@ class OurChildren(models.Model):
     def __str__(self):
         return "name: %s - %s" % (self.first_name , self.last_name)
 
+    def get_name(self):
+        return (self.first_name)
+
     def get_thumbnail(self, thumb_size=None):
 
         base = Image.open(StringIO(self.image.read()))  # get the image

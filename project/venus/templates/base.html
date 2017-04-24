@@ -1,14 +1,13 @@
 {% load cms_tags menu_tags sekizai_tags %}
-<!doctype html>
 <html>
     <head>
         <title>{% block title %}This is my new project home page{% endblock title %}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-          <link href="../../static/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+          <link href=" ../static/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
       <!--<link href="../static/css/style.css" rel="stylesheet" type="text/css">-->
 
-      <script type="text/javascript" src="../../static/bootstrap/js/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="../../static/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../static/bootstrap/js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="../static/bootstrap/js/bootstrap.min.js"></script>
         <style type="text/css">
             .nav {
                 padding-left: 0;
@@ -17,6 +16,9 @@
                 display: inline;
                 list-style-type: none;
                 padding-right: 20px;
+            }
+            .navbar{
+                margin-bottom: 0px !important;
             }
             .container {
                 width: 940px;
@@ -30,6 +32,20 @@
                 float: left;
                 width: 20%;
             }
+            .image_hero{
+                width: 100%;
+                max-height: 200px;
+            }
+            .container {
+                width: 1340px !important;
+                margin: 0 auto;
+            }
+            .row{
+                margin:10px;
+            }
+            .img{
+                margin:2%;
+            }
         </style>
         {% render_block "css" %}
     </head>
@@ -37,8 +53,8 @@
         {% cms_toolbar %}
         <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
 
-        <div class="container">
-            <a class="navbar-brand" href="/" >Abenezer Yakob</a>
+        <div class="">
+            <a class="navbar-brand" href="/" >Freedom charity</a>
             <div class="collapse navbar-collapse" id="navbarExample">
                 <ul class="nav navbar-nav">
                     <li>{% show_menu 0 1 100 100  %}</li>

@@ -1,11 +1,30 @@
 {% load thumbnail %}
 
 {% block plugin_content %}
-    <div class="container">
+    <div class="">
         <span>
-            {% for i in instance.our_children.all %}
-            {{ i.first_name}}
-            {% endfor%}
+            <div class="panel panel-default" >
+                <div class="panel-heading" style="background-color: #8b9dc3;">
+                    <h3>{{instance.title }}</h3>
+                </div>
+                  {% for i in instance.our_children.all %}
+                <div class="panel-body">
+                    <div class="row">
+                      <div class="col-xs-12 col-md-4">
+                          <img class="thumbnail" src="{% thumbnail i.image 150x150 %}" >
+                      </div>
+                      <div class="col-xs-12 col-md-4">
+                          <H4> Name: {{ i.first_name}} {{ i.last_name}}</H4>
+                          <H5> Age: <span class="badge" style="background-color: #3B5998; color: #FFF; margin: 2px !important;">{{ i.age}}</span>  </H5>
+                      </div>
+                        <div class="col-xs-12 col-md-4" style="max-height: 150px; overflow-y: scroll">
+                            <H4> Somting:<H4> <h6>{{ i.content| safe}}</h6>
+
+                      </div>
+                    </div>
+                </div>
+                {% endfor%}
+            </div>
         </span>
     </div>
 {% endblock %}

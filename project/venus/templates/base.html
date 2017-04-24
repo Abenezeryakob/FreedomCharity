@@ -9,6 +9,9 @@
       <script type="text/javascript" src="../static/bootstrap/js/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="../static/bootstrap/js/bootstrap.min.js"></script>
         <style type="text/css">
+            body{
+                background-color: #f5f8fa;
+            }
             .nav {
                 padding-left: 0;
             }
@@ -19,6 +22,14 @@
             }
             .navbar{
                 margin-bottom: 0px !important;
+                background-color: #3b5998;
+            }
+            .navbar-inverse .navbar-brand {
+                    color: #FFF;
+                }
+
+            .navbar-inverse .navbar-nav > li > a {
+                color: #FFF;
             }
             .container {
                 width: 940px;
@@ -34,11 +45,13 @@
             }
             .image_hero{
                 width: 100%;
-                max-height: 200px;
+                max-height: 400px;
             }
             .container {
-                width: 1340px !important;
-                margin: 0 auto;
+                /*width: 1240px !important;*/
+                margin: 0 auto!important;
+                padding-top: 0px;
+                margin-top: 0px;
             }
             .row{
                 margin:10px;
@@ -46,11 +59,55 @@
             .img{
                 margin:2%;
             }
+            .panel-heading h3{
+                color: #fff;
+            }
+            .panel-body{
+                  border-bottom: 1px solid transparent !important;
+                border-top-left-radius: 3px !important;
+                border-top-right-radius: 3px !important;
+                border-color: #ddd !important;
+                margin: 0px !important;
+
+            }
+            .test_class{
+                background-color: #FFF;
+                padding: 10px 15px;
+                border-bottom: 1px solid transparent !important;
+                border-top-left-radius: 3px !important;
+                border-top-right-radius: 3px !important;
+                border-color: #ddd !important;
+            }
+            @media (min-width:320px)  {
+                .container {
+                width: 100% !important;
+                margin: 5px auto;
+                }
+
+            }
+
+            @media (min-width:480px)  {
+                .container {
+                width: 100% !important;
+                margin: 5px auto;
+                }
+              }
+            @media (min-width:600px)  {
+                /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+            @media (min-width:801px)  {
+                /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+            @media (min-width:1025px) {
+                /* big landscape tablets, laptops, and desktops */ }
+            @media (min-width:1281px) {
+                /* hi-res laptops and desktops */ }
+
         </style>
+
         {% render_block "css" %}
     </head>
     <body>
         {% cms_toolbar %}
+
         <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
 
         <div class="">

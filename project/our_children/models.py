@@ -18,7 +18,7 @@ class OurChildren(models.Model):
 
 
     def __str__(self):
-        return "name: %s - %s" % (self.first_name , self.last_name)
+        return " %s   %s" % (self.first_name , self.last_name)
 
     def get_name(self):
         return (self.first_name)

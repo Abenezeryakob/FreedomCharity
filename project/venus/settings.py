@@ -156,8 +156,11 @@ INSTALLED_APPS = (
     'ckeditor_uploader',
     'ckeditor',
     'cmsplugin',
+    'post',
+    'post.cms_toolbars'
 
 )
+
 
 CKEDITOR_CONFIGS = {
     'default': {
@@ -240,3 +243,12 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+
+
+
+#change later !!!!!!!
+
+CMS_PAGE_CACHE = False
+CMS_PLACEHOLDER_CACHE = False
+CMS_PLUGIN_CACHE = False

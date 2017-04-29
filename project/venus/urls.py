@@ -15,10 +15,13 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^sitemap\.xml$', sitemap,
         {'sitemaps': {'cmspages': CMSSitemap}}),
+
 ]
 
 urlpatterns += i18n_patterns(
     url(r'^admin/', include(admin.site.urls)),  # NOQA
+    #url(r'^post/', include('post.urls'), name="post"),
+    #url(r'^post/', include('post.urls'), name="post"),
     url(r'^', include('cms.urls')),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
     #url(r'^our_children', include('our_children.urls')),

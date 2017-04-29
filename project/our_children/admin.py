@@ -17,6 +17,7 @@ class OurChildenAdmin(admin.ModelAdmin):
         return format_html('<img src="{}" width ="100" height="100" />'.format(obj.image.url))
     image_tag.short_description = 'Image'
     model = OurChildren
+    search_fields = ('first_name', 'last_name', 'age')
     list_display = ['first_name', 'last_name', 'age','image_tag']
     list_display_links = ('first_name','age', 'last_name')
 
